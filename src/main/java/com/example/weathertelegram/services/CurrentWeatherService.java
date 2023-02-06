@@ -23,6 +23,7 @@ public class CurrentWeatherService {
     private static final String WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather?q={city}," +
             "{country}&APPID={apiKey}&units=imperial";
 
+    private static URI url = null;
     private final RestTemplate restTemplate;
 
     private final ObjectMapper objectMapper;
@@ -36,7 +37,7 @@ public class CurrentWeatherService {
     }
 
     public CurrentWeather getCurrentWeather(String city, String country) {
-        final URI url = new UriTemplate(WEATHER_URL).expand(city, country, apiKey);
+        url = new UriTemplate(WEATHER_URL).expand(city, country, apiKey);
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
         return convert(response);
     }
