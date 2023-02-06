@@ -15,9 +15,9 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 @EnableScheduling
 public class TelegramBotService extends TelegramLongPollingBot {
 
-    final TelegramBotConfig telegramBotConfig;
+    private final TelegramBotConfig telegramBotConfig;
 
-    final CurrentWeatherService currentWeatherService;
+    private final CurrentWeatherService currentWeatherService;
 
     public TelegramBotService(TelegramBotConfig telegramBotConfig, CurrentWeatherService currentWeatherService) {
         this.telegramBotConfig = telegramBotConfig;
