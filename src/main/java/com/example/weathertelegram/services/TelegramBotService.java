@@ -13,15 +13,15 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 @Slf4j
 @Component
 @EnableScheduling
-public class TelegramBotServices extends TelegramLongPollingBot {
+public class TelegramBotService extends TelegramLongPollingBot {
 
     final TelegramBotConfig telegramBotConfig;
 
-    final CurrentWeatherServices currentWeatherServices;
+    final CurrentWeatherService currentWeatherService;
 
-    public TelegramBotServices(TelegramBotConfig telegramBotConfig, CurrentWeatherServices currentWeatherServices) {
+    public TelegramBotService(TelegramBotConfig telegramBotConfig, CurrentWeatherService currentWeatherService) {
         this.telegramBotConfig = telegramBotConfig;
-        this.currentWeatherServices = currentWeatherServices;
+        this.currentWeatherService = currentWeatherService;
     }
 
     @Override
@@ -41,7 +41,6 @@ public class TelegramBotServices extends TelegramLongPollingBot {
             long chatId = update.getMessage().getChatId();
 
             switch (messageText) {
-
                 case "/start":
                     startCommandReceived(chatId);
                     break;
@@ -53,6 +52,7 @@ public class TelegramBotServices extends TelegramLongPollingBot {
         }
     }
 
+
     private void startCommandReceived(long chatId) {
         String answer = "Hi! I will show you the weather in Kyiv:) " +
                 "Enter /viewWeatherNow  if you wanna to know weather wright now.";
@@ -60,7 +60,7 @@ public class TelegramBotServices extends TelegramLongPollingBot {
     }
 
     private void commandReceivedGetWeather(long chatId) {
-        String answer = currentWeatherServices.getCurrentWeather();
+        String answer = currentWeatherService.getCurrentWeather();
         sendMessage(chatId, answer);
     }
 
@@ -75,10 +75,10 @@ public class TelegramBotServices extends TelegramLongPollingBot {
         }
     }
 
-    @Scheduled(cron = "0 0 * * * *", zone = "Europe/Kyiv")
-    public void gettingTheWeatherEveryHour() throws TelegramApiException {
+    @Scheduled(cron = "0 */5 * * * *", zone = "Europe/Kyiv")
+    private void gettingTheWeatherEveryHour() throws TelegramApiException {
         String groupId = "@Hi18090";
-        String message = currentWeatherServices.getCurrentWeather();
+        String message = currentWeatherService.getCurrentWeather();
         execute(new SendMessage(groupId, message));
     }
 }

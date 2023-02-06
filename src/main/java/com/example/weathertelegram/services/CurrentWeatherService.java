@@ -18,27 +18,38 @@ import java.net.URI;
 @Service
 @Slf4j
 @Component
-public class CurrentWeatherServices {
+public class CurrentWeatherService {
 
     private static final String WEATHER_URL = "http://api.openweathermap.org/data/2.5/weather?q={city}," +
             "{country}&APPID={apiKey}&units=imperial";
 
     private final RestTemplate restTemplate;
+
     private final ObjectMapper objectMapper;
 
     @Value("${OPENWEATHERMAP_KEY}")
     private String apiKey;
 
-    public CurrentWeatherServices(RestTemplateBuilder restTemplateBuilder, ObjectMapper objectMapper) {
+    public CurrentWeatherService(RestTemplateBuilder restTemplateBuilder, ObjectMapper objectMapper) {
         this.restTemplate = restTemplateBuilder.build();
         this.objectMapper = objectMapper;
     }
 
     public CurrentWeather getCurrentWeather(String city, String country) {
-
-        URI url = new UriTemplate(WEATHER_URL).expand(city, country, apiKey);
+        final URI url = new UriTemplate(WEATHER_URL).expand(city, country, apiKey);
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
         return convert(response);
+    }
+
+    public String getCurrentWeather() {
+        CurrentWeather currentWeather = getCurrentWeather("Kyiv", "UA");
+        return currentWeather.getCity() + " , " + currentWeather.getCountry() + "\n"
+                + "weather:  " + currentWeather.getWeather() + "\n"
+                + "temperature:  " + (int) currentWeather.getTemperature() + " °C" + "\n"
+                + "feels like:  " + (int) currentWeather.getFeelsLike() + " °C" + "\n"
+                + "windSpeed:  " + (int) currentWeather.getWindSpeed() + " meters/sec" + "\n"
+                + "pressure:  " + (int) currentWeather.getPressure() + " hPa" + "\n"
+                + "humidity:  " + (int) currentWeather.getHumidity() + " %";
     }
 
     private CurrentWeather convert(ResponseEntity<String> response) {
@@ -66,16 +77,5 @@ public class CurrentWeatherServices {
 
     private static int convertFahrenheitToCelsius(Double fahrenheit) {
         return (int) Math.round((fahrenheit - 32) / 1.8);
-    }
-
-    public String getCurrentWeather() {
-        CurrentWeather currentWeather = getCurrentWeather("Kyiv", "UA");
-        return currentWeather.getCity() + " , " + currentWeather.getCountry() + "\n"
-                + "weather:  " + currentWeather.getWeather() + "\n"
-                + "temperature:  " + (int) currentWeather.getTemperature() + " °C" + "\n"
-                + "feels like:  " + (int) currentWeather.getFeelsLike() + " °C" + "\n"
-                + "windSpeed:  " + (int) currentWeather.getWindSpeed() + " meters/sec" + "\n"
-                + "pressure:  " + (int) currentWeather.getPressure() + " hPa" + "\n"
-                + "humidity:  " + (int) currentWeather.getHumidity() + " %";
     }
 }
