@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd
+    http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.6.xsd ">
+
+    <changeSet id="124wd52" author="Mariya">
+        <createTable tableName="users">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="chat_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_bonus_code_given_telegram" type="boolean">
+            </column>
+            <column name="is_bonus_code_given_instagram" type="boolean">
+            </column>
+            <column name="date_of_given_bonus_code_telegram" type="datetime">
+            </column>
+            <column name="date_of_given_bonus_code_instagram" type="datetime">
+            </column>
+        </createTable>
+        <createTable tableName="binary_contents">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="file_as_array_of_bytes" type="LONGBLOB">
+            </column>
+        </createTable>
+        <createTable tableName="bonus_code">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="code" type="varchar(300)">
+            </column>
+        </createTable>
+
+
+
+
+
+
+        <createTable tableName="images">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="telegram_file_id" type="varchar(2000)">
+            </column>
+            <column name="binary_content_id" type="int">
+                <constraints foreignKeyName="fk_images_binary_content"
+                             referencedTableName="binary_contents" referencedColumnNames="id"/>
+            </column>
+            <column name="file_size" type="int">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+        <createTable tableName="posts">
+            <column name="id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="description" type="varchar(2000)">
+            </column>
+            <column name="chat_id" type="int">
+            </column>
+            <column name="form" type="varchar(2000)">
+            </column>
+            <column name="image_id" type="int">
+                <constraints foreignKeyName="fk_posts_images"
+                             referencedTableName="images" referencedColumnNames="id"/>
+            </column>
+        </createTable>
+
+
+
+
+    </changeSet>
+</databaseChangeLog>
