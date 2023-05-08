@@ -1,4 +1,4 @@
-package com.example.weathertelegram.models;
+package com.example.battle_bot.models;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -10,8 +10,11 @@ public class Value {
     public static final long ID_ADMIN_2 = 494058982;
 
     public static final long PK_ID_THE_BATTLE_CLUB_INSTAGRAM = 42177516142L;
+
     public static final String USERNAME_THE_BATTLE_CLUB_INSTAGRAM = "thebattleclub";
+
     public static final String PASSWORD_INSTAGRAM = "6abae99c88";
+
     public static final String USERNAME_INSTAGRAM = "neyr_future";
     public static final String BOT_USERNAME = "battleClub_bot";
     public static final String BOT_TOKEN = "6128401778:AAFPayu7bnxTg3rey_GW6NPJRvKPTpX0zSs";

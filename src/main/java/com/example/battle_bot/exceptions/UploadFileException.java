@@ -1,4 +1,4 @@
-package com.example.weathertelegram.exceptions;
+package com.example.battle_bot.exceptions;
 
 public class UploadFileException extends RuntimeException {
     public UploadFileException(String message, Throwable cause) {
@@ -12,6 +12,5 @@ public class UploadFileException extends RuntimeException {
     public UploadFileException(Throwable cause) {
         super(cause);
     }
-
 
 }

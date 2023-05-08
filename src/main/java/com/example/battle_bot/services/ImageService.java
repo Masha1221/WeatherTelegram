@@ -1,11 +1,11 @@
-package com.example.weathertelegram.services;
+package com.example.battle_bot.services;
 
-import com.example.weathertelegram.exceptions.UploadFileException;
-import com.example.weathertelegram.models.BinaryContentEntity;
-import com.example.weathertelegram.models.ImageEntity;
-import com.example.weathertelegram.models.Value;
-import com.example.weathertelegram.repositories.BinaryContentRepository;
-import com.example.weathertelegram.repositories.ImageRepository;
+import com.example.battle_bot.exceptions.UploadFileException;
+import com.example.battle_bot.models.BinaryContentEntity;
+import com.example.battle_bot.models.ImageEntity;
+import com.example.battle_bot.models.Value;
+import com.example.battle_bot.repositories.BinaryContentRepository;
+import com.example.battle_bot.repositories.ImageRepository;
 import lombok.RequiredArgsConstructor;
 import org.json.JSONObject;
 import org.springframework.http.*;

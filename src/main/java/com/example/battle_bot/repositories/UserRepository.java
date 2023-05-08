@@ -1,6 +1,6 @@
-package com.example.weathertelegram.repositories;
+package com.example.battle_bot.repositories;
 
-import com.example.weathertelegram.models.UserEntity;
+import com.example.battle_bot.models.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

@@ -1,6 +1,6 @@
-package com.example.weathertelegram.configs;
+package com.example.battle_bot.configs;
 
-import com.example.weathertelegram.services.TelegramBotService;
+import com.example.battle_bot.services.TelegramBotService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;

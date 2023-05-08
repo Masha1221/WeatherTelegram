@@ -1,7 +1,7 @@
-package com.example.weathertelegram.services;
+package com.example.battle_bot.services;
 
-import com.example.weathertelegram.models.UserEntity;
-import com.example.weathertelegram.repositories.UserRepository;
+import com.example.battle_bot.models.UserEntity;
+import com.example.battle_bot.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.objects.Message;

@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6b55bce-3974-4f9f-abec-7b1b003a83c3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/weathertelegram/models/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/weathertelegram/WeatherTelegramApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/weathertelegram/TheBattleTelegramApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/weathertelegram/configs/TelegramBotConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/weathertelegram/models/CurrentWeather.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/weathertelegram/services/CurrentWeatherService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/weathertelegram/services/TelegramBotService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/weathertelegram/WeatherTelegramApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/weathertelegram/TheBattleTelegramApplicationTests.java" afterDir="false" />
-    </list>
+    <list default="true" id="b6b55bce-3974-4f9f-abec-7b1b003a83c3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,34 +56,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path&quot;: &quot;C:\\Users\\Maria\\Documents\\Downloads\\weather_telegram_bot&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Maria/Downloads/Battle club telegram bot/instagram4j-2.0.7&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.20258065&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.5367647&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;7b1312a1b3e74bb174b3fbbf68ab5a92&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path": "C:\\Users\\Maria\\Documents\\Downloads\\weather_telegram_bot",
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "last_opened_file_path": "C:/Users/Maria/Documents/Downloads/thebattleclub_bot",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.20258065",
+    "project.structure.side.proportion": "0.5367647",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "spring.configuration.checksum": "7b1312a1b3e74bb174b3fbbf68ab5a92"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Spring Boot.WeatherTelegramApplication">
     <configuration name="TheBattleTelegramApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="thebattleclub_bot" />
@@ -122,11 +112,31 @@
       <workItem from="1681456001215" duration="191781000" />
       <workItem from="1683525415625" duration="797000" />
       <workItem from="1683528024096" duration="669000" />
+      <workItem from="1683532281810" duration="361000" />
     </task>
+    <task id="LOCAL-00001" summary=",">
+      <created>1683532490857</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683532490857</updated>
+    </task>
+    <task id="LOCAL-00002" summary=",">
+      <created>1683532578328</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683532578328</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="," />
+    <option name="LAST_COMMIT_MESSAGE" value="," />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

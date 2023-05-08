@@ -1,10 +1,10 @@
-package com.example.weathertelegram.services;
+package com.example.battle_bot.services;
 
-import com.example.weathertelegram.exceptions.UploadFileException;
-import com.example.weathertelegram.models.ImageEntity;
-import com.example.weathertelegram.models.PostEntity;
-import com.example.weathertelegram.models.UserEntity;
-import com.example.weathertelegram.models.Value;
+import com.example.battle_bot.exceptions.UploadFileException;
+import com.example.battle_bot.models.ImageEntity;
+import com.example.battle_bot.models.PostEntity;
+import com.example.battle_bot.models.UserEntity;
+import com.example.battle_bot.models.Value;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

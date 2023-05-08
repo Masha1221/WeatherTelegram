@@ -1,7 +1,6 @@
-package com.example.weathertelegram.models;
+package com.example.battle_bot.models;
 
 import lombok.*;
-import lombok.experimental.Accessors;
 
 
 import javax.persistence.*;

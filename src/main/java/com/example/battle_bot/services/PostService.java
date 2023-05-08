@@ -1,8 +1,8 @@
-package com.example.weathertelegram.services;
+package com.example.battle_bot.services;
 
-import com.example.weathertelegram.exceptions.EntityException;
-import com.example.weathertelegram.models.PostEntity;
-import com.example.weathertelegram.repositories.PostRepository;
+import com.example.battle_bot.exceptions.EntityException;
+import com.example.battle_bot.models.PostEntity;
+import com.example.battle_bot.repositories.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -20,7 +20,7 @@ public class PostService {
         return postRepository.findById(id).orElseThrow(() -> new EntityException("PostEntity not found"));
     }
 
-    public void savePost(PostEntity post){
+    public void savePost(PostEntity post) {
         postRepository.save(post);
     }
 }
